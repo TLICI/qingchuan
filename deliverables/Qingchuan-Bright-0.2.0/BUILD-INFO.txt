@@ -1,0 +1,18 @@
+﻿应用名称：晴川
+Application ID：com.qingchuan.connect
+应用版本：0.2.0
+Bright SDK：使用 app/libs/bright_sdk.aar 中的固定版本
+构建类型：debug
+
+主要完善：
+1. 使用官方 Bright SDK 授权页面
+2. 不自动同意
+3. Web Indexing 开关反映 SDK 实际授权状态
+4. 开启时仅展示授权页面
+5. 关闭时调用 BrightApi.optOut()
+6. 提供官方 Learn more 链接
+7. 使用 getConsentChoice() 同步状态
+8. 不在 APK 中保存 Bright API key
+
+APK SHA-256：
+A33576EAAF1D12810280C6ABEEBF458CC744AF2F533187194324C1CFEFB9BDC7

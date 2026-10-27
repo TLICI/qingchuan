@@ -1,0 +1,25 @@
+test_discovers_public_api_from_bytecode (test_build_tools.BytecodeTests.test_discovers_public_api_from_bytecode) ... ok
+test_generated_binding_compiles_against_contract_fixture (test_build_tools.BytecodeTests.test_generated_binding_compiles_against_contract_fixture) ... ok
+test_invalid_version_not_injected (test_build_tools.BytecodeTests.test_invalid_version_not_injected) ... ok
+test_missing_api_fails_closed (test_build_tools.BytecodeTests.test_missing_api_fails_closed) ... ok
+test_application_id (test_build_tools.SourceTests.test_application_id) ... ok
+test_invalid_aar_fails (test_build_tools.SourceTests.test_invalid_aar_fails) ... ok
+test_invalid_class_fails (test_build_tools.SourceTests.test_invalid_class_fails) ... ok
+test_no_hidden_opt_in_or_runtime_key (test_build_tools.SourceTests.test_no_hidden_opt_in_or_runtime_key) ... ok
+test_parse_downloader_json (test_build_tools.SourceTests.test_parse_downloader_json) ... ok
+test_scrub (test_build_tools.SourceTests.test_scrub) ... ok
+test_secret_scan_nested_archive (test_build_tools.SourceTests.test_secret_scan_nested_archive) ... ok
+test_ui_ids_exist (test_build_tools.SourceTests.test_ui_ids_exist) ... ok
+test_xml_and_string_references (test_build_tools.SourceTests.test_xml_and_string_references) ... ok
+test_zip_normal (test_build_tools.SourceTests.test_zip_normal) ... ok
+test_zip_symlink_blocked (test_build_tools.SourceTests.test_zip_symlink_blocked) ... ok
+test_zip_traversal_blocked (test_build_tools.SourceTests.test_zip_traversal_blocked) ... ok
+test_gradle_environment_has_no_api_key (test_security_contracts.SecurityContracts.test_gradle_environment_has_no_api_key) ... ok
+test_rejects_draft_and_prerelease (test_security_contracts.SecurityContracts.test_rejects_draft_and_prerelease) ... ok
+test_rejects_unsafe_tag (test_security_contracts.SecurityContracts.test_rejects_unsafe_tag) ... ok
+test_resolves_official_latest_release (test_security_contracts.SecurityContracts.test_resolves_official_latest_release) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.878s
+
+OK

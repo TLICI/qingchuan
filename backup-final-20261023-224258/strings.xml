@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">晴川</string>
+    <string name="web_indexing">Web Indexing</string>
+    <string name="support_text">自愿开启可支持本应用的运行与维护；关闭不影响应用的基本使用。</string>
+    <string name="disclosure">开启后，Bright Data 可使用设备空闲网络资源和 IP 地址访问公共网页。只有在官方弹窗中同意后才会加入，之后可随时在此关闭。</string>
+    <string name="off_now">关闭 Web Indexing</string>
+    <string name="learn_more">了解更多</string>
+    <string name="privacy">隐私政策</string>
+    <string name="terms">用户许可协议</string>
+    <string name="status_heading">当前状态</string>
+    <string name="details_heading">应用信息</string>
+    <string name="refresh">刷新状态</string>
+    <string name="consent_note">此开关反映授权状态，不证明设备已经接收或转发任务。</string>
+    <string name="traffic_note">下方仅统计当前应用 UID 自本页面创建以来的收发字节，可能包含控制流量；不是任务数量或收益。</string>
+    <string name="no_browser">没有可打开此链接的浏览器。</string>
+    <string name="status_none">尚未选择</string>
+    <string name="status_off">已关闭</string>
+    <string name="status_on">已同意，运行情况以 SDK 和平台为准</string>
+    <string name="status_error">SDK 状态不可用。请检查构建版本及设备日志。</string>
+</resources>

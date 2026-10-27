@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/app_name" android:textSize="30sp" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="@string/status_heading" android:textStyle="bold" />
+        <TextView android:id="@+id/status" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textSize="17sp" />
+        <androidx.appcompat.widget.SwitchCompat android:id="@+id/web_indexing"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:minHeight="56dp" android:text="@string/web_indexing" android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/support_text" android:textSize="15sp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="@string/disclosure" android:textSize="15sp" />
+        <Button android:id="@+id/off_now" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/off_now" />
+        <Button android:id="@+id/learn_more" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="@string/learn_more" />
+        <Button android:id="@+id/privacy" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="@string/privacy" />
+        <Button android:id="@+id/terms" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="@string/terms" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="@string/consent_note" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="@string/details_heading" android:textStyle="bold" />
+        <TextView android:id="@+id/details" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textIsSelectable="true" />
+        <TextView android:id="@+id/traffic" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="12dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="@string/traffic_note" />
+        <Button android:id="@+id/refresh" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/refresh" />
+    </LinearLayout>
+</ScrollView>

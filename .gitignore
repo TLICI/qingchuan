@@ -1,0 +1,15 @@
+.gradle/
+.tools/
+**/build/
+local.properties
+*.keystore
+*.jks
+.env
+.env.*
+!.env.example
+app/libs/*.aar
+app/src/generated/
+sdk-lock.json
+output/
+__pycache__/
+*.pyc

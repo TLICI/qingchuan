@@ -1,0 +1,7 @@
+Python: 3.13.5
+Application ID: com.qingchuan.connect
+JDK: /usr/lib/jvm/java-21-openjdk-amd64
+MISSING: Android SDK not ready. Install Android SDK Platform 35 and Build-Tools 35.0.0 using Android Studio > SDK Manager, then set ANDROID_HOME. No licenses are auto-accepted.
+Rust cargo (optional): not installed
+Official AAR: not downloaded yet
+API key: will prompt locally when needed

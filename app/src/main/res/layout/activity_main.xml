@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.qingchuan.connect.LandscapeView
+        android:id="@+id/landscapeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="40dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/landscape_title"
+            android:textColor="#FFFFFFFF"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:shadowColor="#66000000"
+            android:shadowDx="0"
+            android:shadowDy="2"
+            android:shadowRadius="6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/landscape_subtitle"
+            android:textColor="#E6FFFFFF"
+            android:textSize="14sp"
+            android:shadowColor="#66000000"
+            android:shadowDx="0"
+            android:shadowDy="1"
+            android:shadowRadius="4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/landscape_hint"
+            android:textColor="#CCFFFFFF"
+            android:textSize="13sp"
+            android:shadowColor="#66000000"
+            android:shadowDx="0"
+            android:shadowDy="1"
+            android:shadowRadius="4" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="44dp"
+        android:layout_marginRight="24dp"
+        android:background="#66000000"
+        android:paddingLeft="12dp"
+        android:paddingTop="6dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="6dp"
+        android:textColor="#FFFFFFFF"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="40dp">
+
+        <TextView
+            android:id="@+id/dayNightButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:background="#CCFFFFFF"
+            android:gravity="center"
+            android:text="@string/action_day_night"
+            android:textColor="#1F2937"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/openSettings"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="#CCFFFFFF"
+            android:gravity="center"
+            android:text="@string/action_settings"
+            android:textColor="#1F2937"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</FrameLayout>

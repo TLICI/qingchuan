@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-10-23T07:42:36.794538+00:00",
+  "application_label": "晴川",
+  "application_id": "com.qingchuan.connect",
+  "host_version": "0.1.0",
+  "artifact_type": "source-and-local-build-tools",
+  "offline_tests_passed": 20,
+  "test_boundary": "Tooling and temporary Java interface fixtures only; not official SDK integration or Android compilation",
+  "real_bright_sdk_downloaded": false,
+  "official_downloader_downloaded": false,
+  "android_apk_built": false,
+  "android_lint_run": false,
+  "apk_signature_verified": false,
+  "real_device_tested": false,
+  "user_api_key_used": false,
+  "user_api_key_stored_in_deliverables": false,
+  "blockers": [
+    "External DNS resolution failed in execution environment",
+    "Android SDK Platform 35 and Build-Tools 35.0.0 absent",
+    "Official Bright AAR not available"
+  ],
+  "local_command_windows": ".\\build.cmd",
+  "local_command_unix": "./build.sh"
+}

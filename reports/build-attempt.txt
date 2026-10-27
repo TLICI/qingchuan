@@ -1,0 +1,1 @@
+ERROR: Android SDK not ready. Install Android SDK Platform 35 and Build-Tools 35.0.0 using Android Studio > SDK Manager, then set ANDROID_HOME. No licenses are auto-accepted.

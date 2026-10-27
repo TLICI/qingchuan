@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">晴川</string>
+
+    <string name="app_description">设备功能设置</string>
+
+    <string name="web_indexing">Web Indexing</string>
+
+    <string name="status_enabled">状态：已启用</string>
+    <string name="status_disabled">状态：未启用</string>
+    <string name="status_not_selected">状态：尚未选择</string>
+
+    <string name="value_enabled">Web Indexing 已启用。该功能会使用设备的空闲资源和 IP 地址访问公开网页数据。参与完全自愿，你可以随时关闭。</string>
+
+    <string name="value_disabled">Web Indexing 当前未启用。开启后将显示 Bright Data 的授权说明，只有你主动同意后才会启用。</string>
+
+    <string name="value_not_selected">开启 Web Indexing 可帮助支持晴川。开启时会先显示完整授权说明，由你自行决定是否参与。</string>
+
+    <string name="learn_more">了解详情（Learn more）</string>
+
+    <string name="privacy_note">参与完全自愿。开启前会显示完整授权说明，关闭 Web Indexing 后将撤销当前授权。</string>
+
+    <string name="settings">设置</string>
+    <string name="settings_title">设置</string>
+    <string name="settings_hint">你可以随时在此关闭 Web Indexing。关闭后会立即撤销授权，应用将停止使用设备的空闲资源和 IP 地址。</string>
+    <string name="disable_web_indexing">关闭 Web Indexing</string>
+
+    <string name="landscape_title">晴川</string>
+    <string name="landscape_subtitle">山水之间 · 单机</string>
+    <string name="landscape_hint">轻触光点收集，轻触山间泛起涟漪</string>
+    <string name="action_day_night">昼夜</string>
+    <string name="action_settings">设置</string>
+    <string name="progress_format">光点 %1$d · %2$s</string>
+
+</resources>
