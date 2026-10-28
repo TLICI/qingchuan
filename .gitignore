@@ -4,6 +4,7 @@
 local.properties
 *.keystore
 *.jks
+keystore.properties
 .env
 .env.*
 !.env.example

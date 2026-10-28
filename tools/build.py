@@ -404,6 +404,13 @@ def verify_apk(apk: Path, sdk: Path, env: dict, lock: dict, secret: str) -> dict
             'bright_api_present_in_dex': True, 'credential_literal_scan_performed': bool(secret),
             'signing_certificate_sha256': match.group(1) if match else 'see local apksigner output'}
 
+def gradle_version_name() -> str:
+    """从 app/build.gradle 读取 versionName，避免脚本里的版本号与真实构建不一致。"""
+    text = (ROOT / 'app/build.gradle').read_text(encoding='utf-8')
+    match = re.search(r"versionName\s+['\"]([^'\"]+)['\"]", text)
+    return match.group(1) if match else '0.0.0'
+
+
 def build(args):
     env = java_environment()
     env, sdk = sdk_environment(env)
@@ -421,19 +428,27 @@ def build(args):
         print('Reusing pinned SDK:', lock['sdk_version'])
     else:
         lock, secret = fetch_sdk(args.sdk_version or 'latest', args.downloader)
+    release = getattr(args, 'release', False)
+    variant = 'release' if release else 'debug'
+    if release and not (ROOT / 'keystore.properties').exists():
+        raise BuildError('Release build needs keystore.properties next to build.cmd '
+                         '(storeFile / storePassword / keyAlias / keyPassword).')
     gradle = get_gradle()
     prepare_wrapper(gradle, env)
     # The secret is absent from all Gradle / Java child environments.
-    result = execute([str(gradle), '--no-daemon', ':app:assembleDebug', ':app:lintDebug'], env=env)
+    tasks = [f':app:assemble{variant.capitalize()}', f':app:lint{variant.capitalize()}']
+    result = execute([str(gradle), '--no-daemon', *tasks], env=env)
     if result.returncode: raise BuildError('Android build or lint failed. No APK is published to output/.')
-    apk = ROOT / 'app/build/outputs/apk/debug/app-debug.apk'
+    apk = ROOT / f'app/build/outputs/apk/{variant}/app-{variant}.apk'
     if not apk.exists(): raise BuildError('Build returned success but expected APK is missing')
     checks = verify_apk(apk, sdk, env, lock, secret)
     output = ROOT / 'output'; output.mkdir(exist_ok=True)
-    published = output / f"Qingchuan-Bright-0.1.0-sdk-{lock['sdk_version']}-debug.apk"
+    version = gradle_version_name()
+    published = output / f"Qingchuan-Bright-{version}-sdk-{lock['sdk_version']}-{variant}.apk"
     shutil.copy2(apk, published)
     manifest = {'built_at_utc': datetime.now(timezone.utc).isoformat(), 'application_id': APPLICATION_ID,
-                'application_label': '晴川', 'version_name': '0.1.0', 'compile_sdk': 35, 'target_sdk': 35,
+                'application_label': '晴川', 'version_name': version, 'variant': variant,
+                'compile_sdk': 35, 'target_sdk': 35,
                 'min_sdk': 24, 'gradle': GRADLE_VERSION, 'android_gradle_plugin': '8.9.2',
                 'sdk': lock, 'apk_name': published.name, 'apk_sha256': sha256(published),
                 'verification': checks, 'real_device_tested_by_this_script': False}
@@ -458,6 +473,8 @@ def main() -> int:
     b = commands.add_parser('build', help='Fetch (or reuse pinned) SDK, compile Android APK, verify output')
     b.add_argument('--sdk-version'); b.add_argument('--refresh-sdk', action='store_true')
     b.add_argument('--aar'); b.add_argument('--downloader')
+    b.add_argument('--release', action='store_true',
+                   help='Build a release-signed APK (requires keystore.properties)')
     args = parser.parse_args()
     if args.command == 'doctor': return doctor()
     if args.command == 'fetch': fetch_sdk(args.sdk_version, args.downloader)

@@ -1,5 +1,13 @@
 plugins { id 'com.android.application' }
 
+// 发布签名从本机 keystore.properties 读取；该文件与 keystore 都不进仓库。
+def keystorePropsFile = rootProject.file('keystore.properties')
+def keystoreProps = new Properties()
+if (keystorePropsFile.exists()) {
+    keystorePropsFile.withInputStream { keystoreProps.load(it) }
+}
+def hasReleaseSigning = keystorePropsFile.exists()
+
 android {
     namespace 'com.qingchuan.connect'
     compileSdk 35
@@ -17,11 +25,24 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     sourceSets { main.java.srcDir 'src/generated/java' }
+    signingConfigs {
+        release {
+            if (hasReleaseSigning) {
+                storeFile rootProject.file(keystoreProps['storeFile'])
+                storePassword keystoreProps['storePassword']
+                keyAlias keystoreProps['keyAlias']
+                keyPassword keystoreProps['keyPassword']
+            }
+        }
+    }
     buildTypes {
         debug { minifyEnabled false }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (hasReleaseSigning) {
+                signingConfig signingConfigs.release
+            }
         }
     }
     lint { abortOnError true }

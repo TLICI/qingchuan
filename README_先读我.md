@@ -43,6 +43,14 @@ py -3 tools\build.py doctor
 
 当终端提示 `Bright SDK API key (hidden; not saved):` 时，粘贴你自己的 key 并按回车，输入不会回显。不要把 key 写入命令行参数、源码、Gradle 配置或 Android UI。交互输入方式避免把 key 字面值写入 PowerShell 命令历史。
 
+发布签名构建：
+
+```powershell
+.\build.cmd --release
+```
+
+release 构建需要工程根目录下的 `keystore.properties`（`storeFile` / `storePassword` / `keyAlias` / `keyPassword`）与对应的 keystore 文件。两者都已在 `.gitignore` 中，不会进入仓库。缺少 `keystore.properties` 时脚本会直接停止，不会产出未签名的 APK。
+
 如果 JAVA_HOME 没有配置，可指向 Android Studio 的 JDK 17/21 目录。脚本也会尝试自动找到它。
 
 ## 3. Linux/macOS 构建
@@ -71,13 +79,15 @@ chmod +x build.sh
 
 ```text
 output/
-  Qingchuan-Bright-0.1.0-sdk-实际版本-debug.apk
+  Qingchuan-Bright-0.2.0-sdk-实际版本-release.apk   （或 -debug.apk）
   build-manifest.json
   SHA256SUMS.txt
 sdk-lock.json
 app/libs/bright_sdk.aar
 app/src/generated/java/com/qingchuan/connect/SdkBinding.java
 ```
+
+文件名中的版本号取自 `app/build.gradle` 的 `versionName`，不再由脚本另行写死。
 
 本交付包没有这些真实构建产物。不要把源码压缩包改扩展名为 APK。
 
