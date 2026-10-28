@@ -56,6 +56,23 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/editToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="82dp"
+        android:layout_marginRight="24dp"
+        android:background="#66000000"
+        android:paddingLeft="12dp"
+        android:paddingTop="6dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="6dp"
+        android:text="@string/action_arrange"
+        android:textColor="#FFFFFFFF"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
         android:id="@+id/progressText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,6 +86,37 @@
         android:paddingBottom="6dp"
         android:textColor="#FFFFFFFF"
         android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/studioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="124dp"
+        android:layout_marginRight="24dp"
+        android:background="#66000000"
+        android:paddingLeft="12dp"
+        android:paddingTop="6dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="6dp"
+        android:text="@string/action_studio"
+        android:textColor="#FFFFFFFF"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/comboText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="140dp"
+        android:shadowColor="#66000000"
+        android:shadowDx="0"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:textColor="#FFA8FFE0"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -90,6 +138,36 @@
             android:textColor="#1F2937"
             android:textSize="15sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/seasonButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="#CCFFFFFF"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/action_season"
+            android:textColor="#1F2937"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sceneButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="#CCFFFFFF"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/action_scene"
+            android:textColor="#1F2937"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/openSettings"

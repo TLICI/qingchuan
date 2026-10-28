@@ -5,4 +5,27 @@
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:fontFamily">sans</item>
     </style>
+
+    <!-- 解锁确认卡片里的收益条目 -->
+    <style name="UnlockItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:drawableLeft">@drawable/ic_check</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textColor">#374151</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- 设置页的分区标题 -->
+    <style name="SettingsSection">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">26dp</item>
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">#9CA3AF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

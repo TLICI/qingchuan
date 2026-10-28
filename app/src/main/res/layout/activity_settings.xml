@@ -2,17 +2,17 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="#F7F8FA">
+    android:background="#F5F6F8"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="24dp"
-        android:paddingTop="32dp"
-        android:paddingRight="24dp"
-        android:paddingBottom="32dp">
+        android:paddingLeft="20dp"
+        android:paddingTop="28dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="36dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -22,56 +22,262 @@
             android:textSize="28sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/settings_subtitle"
+            android:textColor="#9CA3AF"
+            android:textSize="13sp" />
+
+        <!-- 参与 -->
+        <TextView
+            style="@style/SettingsSection"
+            android:text="@string/section_participation" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="#FFFFFF"
-            android:elevation="2dp"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:background="@drawable/bg_card"
+            android:orientation="vertical">
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/settingsWebIndexingSwitch"
+            <include
+                android:id="@+id/rowWebIndexing"
+                layout="@layout/item_switch_row"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/web_indexing"
-                android:textColor="#111827"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#F3F4F6" />
 
             <TextView
                 android:id="@+id/settingsStatusText"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="14dp"
+                android:paddingRight="16dp"
                 android:text="@string/status_not_selected"
                 android:textColor="#374151"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/settingsValueText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:lineSpacingExtra="3dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="6dp"
+                android:paddingRight="16dp"
+                android:text="@string/value_not_selected"
+                android:textColor="#4B5563"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/settingsLearnMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp"
+                android:text="@string/learn_more"
+                android:textColor="#0E9F8A"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/settingsHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="3dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="6dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
                 android:text="@string/settings_hint"
-                android:textColor="#6B7280"
-                android:textSize="14sp" />
+                android:textColor="#9CA3AF"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
         <TextView
             android:id="@+id/disableWebIndexingButton"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="20dp"
-            android:background="#DC2626"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_outline_danger"
             android:gravity="center"
             android:text="@string/disable_web_indexing"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textColor="#DC2626"
+            android:textSize="14sp" />
+
+        <!-- 画面 -->
+        <TextView
+            style="@style/SettingsSection"
+            android:text="@string/section_display" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/rowNightMode"
+                layout="@layout/item_link_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#F3F4F6" />
+
+            <include
+                android:id="@+id/rowHud"
+                layout="@layout/item_switch_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#F3F4F6" />
+
+            <include
+                android:id="@+id/rowRipples"
+                layout="@layout/item_switch_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#F3F4F6" />
+
+            <include
+                android:id="@+id/rowGlows"
+                layout="@layout/item_switch_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#F3F4F6" />
+
+            <include
+                android:id="@+id/rowImmersive"
+                layout="@layout/item_switch_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- 布景 -->
+        <TextView
+            style="@style/SettingsSection"
+            android:text="@string/section_scene" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/rowScene"
+                layout="@layout/item_link_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#F3F4F6" />
+
+            <include
+                android:id="@+id/rowResetScene"
+                layout="@layout/item_link_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- 关于 -->
+        <TextView
+            style="@style/SettingsSection"
+            android:text="@string/section_about" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/rowVersion"
+                layout="@layout/item_link_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#F3F4F6" />
+
+            <include
+                android:id="@+id/rowPrivacy"
+                layout="@layout/item_link_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#F3F4F6" />
+
+            <include
+                android:id="@+id/rowFaq"
+                layout="@layout/item_link_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#F3F4F6" />
+
+            <include
+                android:id="@+id/rowSdk"
+                layout="@layout/item_link_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/settings_footer"
+            android:textColor="#B0B7C3"
+            android:textSize="11sp" />
 
     </LinearLayout>
 </ScrollView>

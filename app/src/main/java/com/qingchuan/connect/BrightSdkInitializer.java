@@ -29,6 +29,28 @@ final class BrightSdkInitializer {
     }
 
     /**
+     * 用户在应用内的解锁对话框里明确点了「立即开启」。
+     * 从未选择过 → 打开 Bright 官方同意界面；曾经明确拒绝过 → 用 SDK 的 externalOptIn
+     * （该接口正是为「用户已在应用内表达同意」的场景准备的，官方界面不会再重复弹出）。
+     *
+     * @return false 表示调用失败
+     */
+    static boolean requestOptIn(Activity activity) {
+        try {
+            Boolean choice = BrightApi.getConsentChoice(activity);
+            if (Boolean.FALSE.equals(choice)) {
+                BrightApi.externalOptIn(activity);
+            } else {
+                BrightApi.showConsent(activity);
+            }
+            return true;
+        } catch (Throwable t) {
+            Log.w(TAG, "requestOptIn failed", t);
+            return false;
+        }
+    }
+
+    /**
      * 确保 SDK 已初始化。返回 false 表示初始化失败。
      */
     static synchronized boolean ensureInitialized(Activity activity) {
@@ -41,8 +63,10 @@ final class BrightSdkInitializer {
             // 不让 SDK 在初始化时自动接管弹窗；由界面在合适时机主动调用 showConsent。
             settings.setSkipConsent(true);
 
-            // 不虚构无广告、金币等并不存在的收益。
-            settings.setBenefit("To support Qingchuan");
+            // 这个文案会显示在 Bright 官方同意界面上，必须与实际奖励一致：
+            // 用户同意后立即解锁「四季任选」「流萤光点」「自定义布景」「自由摆放」四项。
+            settings.setBenefit("Unlock the Four Seasons selector, exclusive firefly light points, "
+                    + "custom scene and free arrangement");
 
             // 避免与宿主自身 JobScheduler ID 冲突。
             settings.setMinJobId(2000);

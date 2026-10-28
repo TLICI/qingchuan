@@ -18,6 +18,8 @@
     <string name="value_not_selected">开启 Web Indexing 可帮助支持晴川。开启时会先显示完整授权说明，由你自行决定是否参与。</string>
 
     <string name="learn_more">了解详情（Learn more）</string>
+    <string name="learn_more_url" translatable="false">https://brightdata.com/sdk/information</string>
+    <string name="learn_more_failed">暂时无法打开浏览器</string>
 
     <string name="privacy_note">参与完全自愿。开启前会显示完整授权说明，关闭 Web Indexing 后将撤销当前授权。</string>
 
@@ -28,9 +30,130 @@
 
     <string name="landscape_title">晴川</string>
     <string name="landscape_subtitle">山水之间 · 单机</string>
-    <string name="landscape_hint">轻触光点收集，轻触山间泛起涟漪</string>
+    <string name="landscape_hint">拖动引萤 · 长按起风 · 轻触涟漪</string>
     <string name="action_day_night">昼夜</string>
+    <string name="action_season">四季</string>
     <string name="action_settings">设置</string>
-    <string name="progress_format">光点 %1$d · %2$s</string>
+    <string name="progress_format">灵光 %1$d · %2$s</string>
+    <string name="combo_format">连击 ×%1$d</string>
+    <string name="unlock_success_title">画面已解锁</string>
+    <string name="unlock_success_subtitle">以下四项现在都可以用了</string>
+    <string name="unlock_success_item_season">四季任选 · 随时切换春夏秋冬</string>
+    <string name="unlock_success_item_glow">流萤光点 · 山间光点变为青绿色</string>
+    <string name="unlock_success_item_scene">自定义布景 · 挑选画面元素与数量</string>
+    <string name="unlock_success_item_arrange">自由摆放 · 拖动日月与松树</string>
+    <string name="unlock_success_positive">开始探索</string>
+    <string name="unlock_dialog_title">解锁更多画面</string>
+    <string name="unlock_dialog_body">参与 Web Indexing 后立即解锁：\n\n· 四季任选：随时切换春、夏、秋、冬\n· 流萤光点：山间光点变成青绿色流萤\n· 自定义布景：挑选画面元素与数量\n· 自由摆放：拖动日月与松树\n\n完全自愿，不影响基础画面使用，也可随时在设置中关闭并撤销授权。</string>
+    <string name="unlock_dialog_positive">立即开启</string>
+    <string name="consent_failed">暂时无法打开授权页面</string>
+    <string name="optout_failed">暂时无法关闭 Web Indexing</string>
+    <string name="optout_done">Web Indexing 已关闭</string>
+    <string name="action_scene">布景</string>
+    <string name="action_arrange">摆放</string>
+    <string name="action_arrange_done">完成</string>
+    <string name="arrange_hint">拖动移动 · 双指缩放 · 点「完成」保存</string>
+
+    <string name="scene_title">布景</string>
+    <string name="scene_hint">选择山水画面里出现哪些元素，并调整它们的数量。所有调整都只保存在本机。</string>
+    <string name="scene_elements">画面元素</string>
+    <string name="scene_sun">日月</string>
+    <string name="scene_clouds">云</string>
+    <string name="scene_birds">飞鸟</string>
+    <string name="scene_water">水面波光</string>
+    <string name="scene_pines">前景松树</string>
+    <string name="scene_cloud_count">云的数量</string>
+    <string name="scene_bird_count">飞鸟的数量</string>
+    <string name="scene_pine_count">松树的数量</string>
+    <string name="scene_reset">恢复默认布景</string>
+
+    <string name="settings_subtitle">晴川 · 所有设置只保存在本机</string>
+    <string name="settings_footer">晴川 · 单机山水\n无账号、无广告、无云端同步</string>
+
+    <string name="section_participation">参与</string>
+    <string name="section_display">画面</string>
+    <string name="section_scene">布景</string>
+    <string name="section_about">关于</string>
+
+    <string name="night_mode">昼夜模式</string>
+    <string name="night_mode_summary">决定首页画面默认是白天还是夜晚</string>
+    <string name="night_mode_follow">跟随系统</string>
+    <string name="night_mode_day">白天</string>
+    <string name="night_mode_night">夜晚</string>
+
+    <string name="pref_show_hud">显示光点进度</string>
+    <string name="pref_show_hud_summary">在画面右上角浮出「灵光 n · 季节」</string>
+    <string name="pref_ripples">轻触涟漪</string>
+    <string name="pref_ripples_summary">轻触山间与水面时泛起水纹</string>
+    <string name="pref_glows">山间光点</string>
+    <string name="pref_glows_summary">关闭后不再浮现光点，也无法收集</string>
+    <string name="pref_immersive">沉浸式全屏</string>
+    <string name="pref_immersive_summary">隐藏状态栏，让画面更完整</string>
+
+    <string name="scene_custom">自定义布景</string>
+    <string name="scene_custom_summary">选择画面元素与各自数量</string>
+    <string name="scene_locked_summary">同意参与后解锁</string>
+    <string name="scene_reset_row">恢复默认布景</string>
+    <string name="scene_reset_summary">清除自定义的元素与位置</string>
+    <string name="scene_reset_done">已恢复默认布景</string>
+
+    <string name="about_version">版本</string>
+    <string name="about_privacy">隐私与数据</string>
+    <string name="about_privacy_summary">设置与布景仅存于本机</string>
+    <string name="about_sdk">第三方组件</string>
+    <string name="about_sdk_value">Bright SDK</string>
+    <string name="about_faq">常见问题</string>
+    <string name="about_faq_summary">Web Indexing 与 Bright Data 的说明</string>
+    <string name="faq_url" translatable="false">https://tlici.github.io/qingchuan/faq.html</string>
+
+    <string name="privacy_dialog_title">隐私与数据</string>
+    <string name="privacy_dialog_body">晴川不收集任何个人信息，没有账号系统，也不上传画面数据。\n\n昼夜模式、光点、涟漪、沉浸式与布景等设置都保存在本机。清除应用数据即可全部重置。\n\n若你选择参与 Web Indexing，相关授权与数据使用由 Bright Data 的官方说明覆盖，可随时在设置中关闭并撤销授权。</string>
+
+    <string name="confirm_reset_scene_title">恢复默认布景？</string>
+    <string name="confirm_reset_scene_body">自定义的元素开关、数量与摆放位置都会被清除。</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_confirm">确定</string>
+
+    <!-- 灵光商店 -->
+    <string name="action_studio">收藏</string>
+    <string name="studio_title">灵光收藏</string>
+    <string name="studio_hint">收集到的光点会化作灵光，可在此兑换新的景物与场景。</string>
+    <string name="studio_spirit">灵光 %1$d</string>
+    <string name="studio_spirit_label">可用灵光</string>
+    <string name="action_back">返回画面</string>
+    <string name="studio_section_scene">场景</string>
+    <string name="studio_section_item">景物</string>
+    <string name="studio_buy">兑换 %1$d</string>
+    <string name="studio_use">切换</string>
+    <string name="studio_in_use">使用中</string>
+    <string name="studio_place">摆放</string>
+    <string name="studio_remove">收起</string>
+    <string name="studio_owned">已拥有</string>
+    <string name="studio_not_enough">灵光不够，再多收集一些光点</string>
+    <string name="studio_bought">已兑换：%1$s</string>
+    <string name="studio_scene_bought">已解锁场景：%1$s</string>
+    <string name="studio_placed">已摆到画面，回到首页可拖动与缩放</string>
+    <string name="studio_removed">已从画面收起</string>
+    <string name="studio_full">画面最多摆放 %1$d 个景物</string>
+
+    <string name="item_boat">一叶小舟</string>
+    <string name="item_boat_hint">泊在水面上的小舟</string>
+    <string name="item_lantern">石灯</string>
+    <string name="item_lantern_hint">夜里会透出暖光</string>
+    <string name="item_crane">仙鹤</string>
+    <string name="item_crane_hint">立于水畔的白鹤</string>
+    <string name="item_pavilion">亭台</string>
+    <string name="item_pavilion_hint">山间的一座小亭</string>
+    <string name="item_waterfall">飞瀑</string>
+    <string name="item_waterfall_hint">自山间垂落的瀑布</string>
+
+    <string name="scene_qingchuan">晴川</string>
+    <string name="scene_xueling">雪岭</string>
+    <string name="scene_chaosheng">潮生</string>
+    <string name="scene_shengu">深谷</string>
+    <string name="scene_qingchuan_hint">默认的青山绿水，随四季变色</string>
+    <string name="scene_xueling_hint">冷色山峦，天光更淡</string>
+    <string name="scene_chaosheng_hint">海面抬高，山势平缓开阔</string>
+    <string name="scene_shengu_hint">山更高更密，画面更幽深</string>
 
 </resources>

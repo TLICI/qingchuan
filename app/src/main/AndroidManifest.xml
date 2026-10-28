@@ -21,5 +21,15 @@
             android:name=".SettingsActivity"
             android:exported="false"
             android:label="@string/settings_title" />
+
+        <activity
+            android:name=".SceneActivity"
+            android:exported="false"
+            android:label="@string/scene_title" />
+
+        <activity
+            android:name=".StudioActivity"
+            android:exported="false"
+            android:label="@string/studio_title" />
     </application>
 </manifest>
