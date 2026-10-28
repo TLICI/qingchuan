@@ -4,6 +4,16 @@
 Application ID / namespace：`com.qingchuan.connect`  
 宿主版本：`0.1.0`（Bright 集成独立版本线，不是旧 PROXIES.SX 应用升级包）
 
+## 隐私政策与常见问题
+
+本应用仅通过 GitHub 以 APK 形式发布，未上架 Google Play 或其他应用商店。
+
+- 隐私政策：https://tlici.github.io/qingchuan/privacy.html
+- 常见问题（Bright Data / Web Indexing）：https://tlici.github.io/qingchuan/faq.html
+- Bright SDK 官方终端用户说明：https://brightdata.com/sdk/information
+
+应用内同样可达：设置 →「隐私与数据」→「查看完整隐私政策」，设置 →「关于」→「常见问题」。
+
 ## 当前交付状态（2026-10-23）
 
 本包是源码和本地构建工具，不是已构建 APK。
