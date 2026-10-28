@@ -313,6 +313,8 @@ public class SettingsActivity extends AppCompatActivity {
                 null, v -> new AlertDialog.Builder(this)
                         .setTitle(R.string.privacy_dialog_title)
                         .setMessage(R.string.privacy_dialog_body)
+                        .setNeutralButton(R.string.privacy_full,
+                                (dialog, which) -> openUrl(getString(R.string.privacy_url)))
                         .setPositiveButton(R.string.action_confirm, null)
                         .show());
 

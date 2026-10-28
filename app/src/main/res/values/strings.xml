@@ -105,6 +105,8 @@
     <string name="about_faq">常见问题</string>
     <string name="about_faq_summary">Web Indexing 与 Bright Data 的说明</string>
     <string name="faq_url" translatable="false">https://tlici.github.io/qingchuan/faq.html</string>
+    <string name="privacy_url" translatable="false">https://tlici.github.io/qingchuan/privacy.html</string>
+    <string name="privacy_full">查看完整隐私政策</string>
 
     <string name="privacy_dialog_title">隐私与数据</string>
     <string name="privacy_dialog_body">晴川不收集任何个人信息，没有账号系统，也不上传画面数据。\n\n昼夜模式、光点、涟漪、沉浸式与布景等设置都保存在本机。清除应用数据即可全部重置。\n\n若你选择参与 Web Indexing，相关授权与数据使用由 Bright Data 的官方说明覆盖，可随时在设置中关闭并撤销授权。</string>
